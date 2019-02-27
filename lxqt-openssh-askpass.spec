@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x42C9C8D3AF5EA5E3 (agaida@siduction.org)
 #
 Name     : lxqt-openssh-askpass
-Version  : 0.14.0
-Release  : 1
-URL      : https://downloads.lxqt.org/downloads/lxqt-openssh-askpass/0.14.0/lxqt-openssh-askpass-0.14.0.tar.xz
-Source0  : https://downloads.lxqt.org/downloads/lxqt-openssh-askpass/0.14.0/lxqt-openssh-askpass-0.14.0.tar.xz
-Source99 : https://downloads.lxqt.org/downloads/lxqt-openssh-askpass/0.14.0/lxqt-openssh-askpass-0.14.0.tar.xz.asc
+Version  : 0.14.1
+Release  : 2
+URL      : https://downloads.lxqt.org/downloads/lxqt-openssh-askpass/0.14.1/lxqt-openssh-askpass-0.14.1.tar.xz
+Source0  : https://downloads.lxqt.org/downloads/lxqt-openssh-askpass/0.14.1/lxqt-openssh-askpass-0.14.1.tar.xz
+Source99 : https://downloads.lxqt.org/downloads/lxqt-openssh-askpass/0.14.1/lxqt-openssh-askpass-0.14.1.tar.xz.asc
 Summary  : LXQt openssh password prompt
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -35,7 +35,6 @@ Summary: bin components for the lxqt-openssh-askpass package.
 Group: Binaries
 Requires: lxqt-openssh-askpass-data = %{version}-%{release}
 Requires: lxqt-openssh-askpass-license = %{version}-%{release}
-Requires: lxqt-openssh-askpass-man = %{version}-%{release}
 
 %description bin
 bin components for the lxqt-openssh-askpass package.
@@ -66,14 +65,14 @@ man components for the lxqt-openssh-askpass package.
 
 
 %prep
-%setup -q -n lxqt-openssh-askpass-0.14.0
+%setup -q -n lxqt-openssh-askpass-0.14.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549321804
+export SOURCE_DATE_EPOCH=1551233479
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -81,7 +80,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1549321804
+export SOURCE_DATE_EPOCH=1551233479
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-openssh-askpass
 cp LICENSE %{buildroot}/usr/share/package-licenses/lxqt-openssh-askpass/LICENSE
