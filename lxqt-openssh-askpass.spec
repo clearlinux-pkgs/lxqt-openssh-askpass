@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBE793007AD22DF7E (tsujan2000@gmail.com)
 #
 Name     : lxqt-openssh-askpass
-Version  : 0.16.0
-Release  : 6
-URL      : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/0.16.0/lxqt-openssh-askpass-0.16.0.tar.xz
-Source0  : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/0.16.0/lxqt-openssh-askpass-0.16.0.tar.xz
-Source1  : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/0.16.0/lxqt-openssh-askpass-0.16.0.tar.xz.asc
+Version  : 0.17.0
+Release  : 7
+URL      : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/0.17.0/lxqt-openssh-askpass-0.17.0.tar.xz
+Source0  : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/0.17.0/lxqt-openssh-askpass-0.17.0.tar.xz
+Source1  : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/0.17.0/lxqt-openssh-askpass-0.17.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -19,7 +19,6 @@ Requires: lxqt-openssh-askpass-license = %{version}-%{release}
 Requires: lxqt-openssh-askpass-man = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
-BuildRequires : liblxqt-data
 BuildRequires : liblxqt-dev
 BuildRequires : lxqt-build-tools
 BuildRequires : qtbase-dev
@@ -67,15 +66,15 @@ man components for the lxqt-openssh-askpass package.
 
 
 %prep
-%setup -q -n lxqt-openssh-askpass-0.16.0
-cd %{_builddir}/lxqt-openssh-askpass-0.16.0
+%setup -q -n lxqt-openssh-askpass-0.17.0
+cd %{_builddir}/lxqt-openssh-askpass-0.17.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1604542099
+export SOURCE_DATE_EPOCH=1618506282
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -88,10 +87,10 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1604542099
+export SOURCE_DATE_EPOCH=1618506282
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lxqt-openssh-askpass
-cp %{_builddir}/lxqt-openssh-askpass-0.16.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-openssh-askpass/7fab4cd4eb7f499d60fe183607f046484acd6e2d
+cp %{_builddir}/lxqt-openssh-askpass-0.17.0/LICENSE %{buildroot}/usr/share/package-licenses/lxqt-openssh-askpass/7fab4cd4eb7f499d60fe183607f046484acd6e2d
 pushd clr-build
 %make_install
 popd
@@ -108,6 +107,7 @@ popd
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ar.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_arn.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ast.qm
+/usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_bg.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ca.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_cs.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_cy.qm
@@ -130,6 +130,7 @@ popd
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_pl.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_pt.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_ru.qm
+/usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_si.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_sk_SK.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_sv.qm
 /usr/share/lxqt/translations/lxqt-openssh-askpass/lxqt-openssh-askpass_tr.qm
