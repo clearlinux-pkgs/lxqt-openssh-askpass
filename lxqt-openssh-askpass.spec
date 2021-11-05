@@ -6,7 +6,7 @@
 #
 Name     : lxqt-openssh-askpass
 Version  : 1.0.0
-Release  : 8
+Release  : 9
 URL      : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/1.0.0/lxqt-openssh-askpass-1.0.0.tar.xz
 Source0  : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/1.0.0/lxqt-openssh-askpass-1.0.0.tar.xz
 Source1  : https://github.com/lxqt/lxqt-openssh-askpass/releases/download/1.0.0/lxqt-openssh-askpass-1.0.0.tar.xz.asc
